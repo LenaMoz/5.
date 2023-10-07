@@ -1,0 +1,122 @@
+# Zadania wprowadzające na lekcji:
+# 1.Wygeneruj listę 10 liczb losowych z przedziału 1 do 100.
+
+
+from random import randint
+
+
+lst = []
+n = int(input())
+for i in range(n):
+    lst.append(randint(1,100))
+print(lst)
+
+
+
+
+# 2.Wygeneruj listę 20 liczb losowych z przedziału 100 do 200. Parzystych niepodzielnych przez 5.
+
+
+lst = []
+while len(lst) != 20:
+    rnd = randint(100,200)
+    if rnd % 5 == 0:
+        lst.append(rnd)
+print(lst)
+
+
+
+
+# 3.Napisz program do którego możemy wprowadzić dowolne zdanie. Niech nasz program wyświetli:
+# Ile mamy d,v,b,n,k.
+
+
+inp = input()
+d_ile = 0
+for el in inp:
+    if el == 'd':
+        d_ile += 1
+print(f"d --- {d_ile}")
+       
+from random import randint
+lista = [randint(-20,20) for el in range(100)]
+print(lista)
+
+
+# 5.Napisz program która z przyjmuje jako argument powyższą listę i zwróci mi ile jest liczb mniejszych od 0.
+
+
+ile_mn = 0
+for el in lista:
+    if el < 0:
+        ile_mn += 1
+print(ile_mn)
+
+
+# 6.Napisz program która z przyjmuje jako argument powyższą listę i zwrócić mi ile jest większych lub równych 0.
+print("666666666666666666666666666666666666")
+print(len(lista) - ile_mn)
+
+# 7.Napisz program która z przyjmuje jako argument powyższą listę i zwrócić mi sumę wszystkich elementów parzystych.
+print("777777777777777777777777777777777777")
+
+s = 0
+for el in lista:
+    if el % 2 == 0:
+        s += el
+print(s)
+
+
+# 8.Napisz program która z przyjmuje jako argument powyższą listę i zwrócić mi sumę wszystkich elementów nieparzystych .
+print("8888888888888888888888888888888888")
+
+s = 0
+for el in lista:
+    if el % 2 != 0:
+        s += el
+print(s)
+
+
+# # 9.Napisz program która przyjmuje jako argument powyższą listę i zwrócić mi sumę wszystkich elementów podzielnych przez 5 i 7.
+print("09999999999999999999999999999999999999")
+
+s = 0
+for el in lista:
+    if el % 7 == 0 and el % 5 == 0:
+        s += el
+print(s)
+
+
+# # 10.Napisz program która z przyjmuje jako argument powyższą listę poprosi o podanie liczby przez użytkownika i powie ile takich liczb występuje na tej liście.
+print("10101001010110010101010101")
+
+inp = int(input())
+ile = 0
+for el in lista:
+    if el == inp:
+        ile += 1
+print(ile)
+
+
+# # 11.Zwrócić lise w których będę zawrte idexy pod którymi występują największe wartości i najmniejsze wartości.
+print("111111111111111111111111111111111")
+
+lst = []
+my_max = max(lista)
+for i in range(len(lista)):
+    if lista[i] == my_max:
+        lst.append(i)
+print(lst)
+   
+
+
+# # 12.Napisz program która wygeneruje listę o n wielkości i “zasięgu” podanego przez użytkownika.
+print("12121212121212121212121212121212121212")
+
+lst = []
+n = int(input())
+maxx = int(input())
+minn = int(input())
+for i in range(n):
+    lst.append(randint(minn,maxx))
+print(lst)
